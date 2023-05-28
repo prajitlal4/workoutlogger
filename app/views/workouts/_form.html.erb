@@ -1,0 +1,24 @@
+<%= form_with model: @workout do |form| %>
+
+  <% if form.object.errors.any? %>
+    <div>
+      <% form.object.errors.full_messages.each do |message| %>
+        <div>
+          <%= message %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= form.label :split %>
+    <%= form.text_field :split %>
+  </div>
+
+  <div>
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <%= form.button %>
+<% end %>

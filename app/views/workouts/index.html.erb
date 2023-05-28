@@ -1,0 +1,8 @@
+<h1>My Workouts</h1>
+
+<% @workouts.each do |workout| %>
+  <div>
+    <h2><%= link_to workout.split, workout %></h2>
+    Duration: <%= workout.duration %> minutes
+  </div>
+<% end %>
